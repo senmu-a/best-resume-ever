@@ -3,7 +3,7 @@
     <div class="banner">
       <div class="banner__fullname">{{ person.name.first }} {{ person.name.middle }} {{ person.name.last }}</div>
       <div class="banner__position">{{ person.position }}</div>
-      <div v-if="person.birth" class="banner__location">{{ lang.born }} {{person.birth.year}} {{ lang.bornIn }} {{person.birth.location}}</div>
+      <div v-if="person.birth" class="banner__location">{{person.birth.year}} <span v-if="person.birth.location">{{lang.bornIn}} {{person.birth.location}}</span></div>
     </div>
 
     <div class="content">
@@ -108,12 +108,13 @@
               :href="experience.website">
 
               <span class="section-content__header">{{ experience.position }}</span>
-              <span class="section-content__subheader">
-                {{ experience.company }}
-                <span class="section-content__plain">{{ experience.location }}</span>
-              </span>
-
-              <div class="section-content__text">{{ experience.timeperiod }}</div>
+              <section class="section-content__header__container">
+                <span class="section-content__subheader">
+                  {{ experience.company }}
+                  <span class="section-content__plain">{{ experience.location }}</span>
+                </span>
+                <span>{{ experience.timeperiod }}</span>
+              </section>
               <span class="section-content__text--light">{{ experience.description }}</span>
             </a>
           </div>
@@ -131,10 +132,11 @@
               :key="index"
               :class="{ link: education.website !== undefined}"
               :href="education.website">
-
-              <span class="section-content__header"> {{ education.school }} </span>
+              <section class="section-content__header__container">
+                <span class="section-content__header"> {{ education.school }} </span>
+                <span> {{ education.timeperiod }} </span>
+              </section>
               <span class="section-content__subheader">{{ education.degree }}</span>
-              <span class="section-content__text"> {{ education.timeperiod }} </span>
               <span class="section-content__text--light"> {{ education.description }} </span>
             </a>
           </div>
@@ -147,12 +149,15 @@
             <i class="section-headline__icon material-icons">code</i>{{ lang.projects }}
           </div>
 
-          <div class="section-content-grid">
+          <div class="section-content">
             <a v-for="(project, index) in person.projects" :key="index"
-              class="section-content__item-grid"
+              class="section-content__item"
               :class="{ link: project.url !== undefined}"
               :href="project.url">
-              <span class="section-content__header"> {{ project.name }} </span>
+              <section class="section-content__header__container">
+                <span class="section-content__header"> {{ project.name }} </span>
+                <span> {{ project.timeperiod }} </span>
+              </section>
               <span class="section-content__subheader">{{ project.platform }}</span>
               <span class="section-content__text"> {{ project.description }} </span>
             </a>
@@ -369,6 +374,15 @@ export default Vue.component(name, getVueOptions(name));
 
 .grid-item {
   padding-right: 5px;
+}
+
+.section-content__header__container {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  .section-content__header {
+    display: inline-block !important;
+  }
 }
 
 .squarred-grid-item {

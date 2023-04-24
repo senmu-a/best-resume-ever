@@ -2,74 +2,79 @@
 # Any fields left unchanged, please delete so your resume is fully yours!
 
 name:
-  first: John
-  middle:
-  last: Doe
-about: Hi, my name is John Doe. I'm just about the most boring type of person you could
-       possibly imagine. I like collecting leaves from the tree in my back yard and documenting
-       each time I eat a peanut that is non-uniform. I am not a robot. Please hire me.
-position: Software Developer
+  first: 秦晓森
+about: 一位喜欢写些东西的前端开发工程师，目前在语雀和掘金都有发表文章，搜索用户“森木阿”可以查看我发布的所有文章，另外，偶尔也喜欢去折腾点项目，在 GitHub 上也有些贡献。
+position: 前端工程师
 
 birth:
-  year: 1990
-  location: New York
+  year: 1998.04.06
 
 # you may add more experiences by duplicating the template
 
 experience:
-- company: Company A
-  position: Developer
-  timeperiod: since January 2016
-  description: Programming and watching cute cat videos.
-  website: https://example.com
+- company: 美团（外包）
+  position: 前端工程师
+  location: 北京
+  timeperiod: 2021.06 — 至今
+  description: 在酒旅做过报账系统（报账系统前端开发、封装可编辑表格组件、封装插件帮助治理 poiId 过长问题）。而后在平台做 Web 容器运营相关平台与工具。(运营系统前后端开发、写脚本迁移上千配置文件和 3000QPS 的服务上线、定时任务)
 
-- company: Company B
-  position: Frontend Developer
-  timeperiod: January 2015 - December 2015
-  description: Fulfillment of extremely important tasks.
-
-- company: Company C
-  position: Trainee
-  timeperiod: March 2014 - December 2014
-  description: Making coffee and baking cookies.
+- company: 成都零点信息技术有限公司
+  position: 前端工程师
+  location: 成都
+  timeperiod: 2019.06 — 2021.06
+  description: 有个产品叫零点校园，做过一个创新功能是拖动生成首页，获得“站长”一致好评；做过点餐小程序，为公司带来 20W 收益.
 
 education:
-- degree: Master of Arts
-  timeperiod: March 2012 - December 2013
-  description: Major in Hacking and Computer Penetration, University A, New York, USA.
-  website: https://example.com
+- school: 中北大学
+  timeperiod: 2022.03.01 — 2025.01.20
+  degree: 计算机科学与技术
+  description:
 
-- degree: Bachelor of Science
-  timeperiod: March 2009 - December 2011
-  description: Major in Engineering, University B, Los Angeles, USA.
+- school: 山西省财政税务专科学校
+  timeperiod: 2016.09.01 — 2019.06.30
+  degree: 计算机应用技术
+  description:
 
 # skill level goes from 0 to 100
 skills:
-- name: HTML5
-  level: 99
-- name: CSS3
-  level: 95
-- name: JavaScript
-  level: 97
-- name: Node.js
-  level: 93
-- name: Angular 2
-  level: 60
 - name: TypeScript
+  level: 96
+- name: React
+  level: 94
+- name: Vue3
+  level: 94
+- name: Vite
   level: 80
-- name: ES.Next
-  level: 70
-- name: Docker
+- name: JavaScript
   level: 99
-knowledge: Also proficient in Adobe Photoshop and Illustrator, grew up bilingual
-  (English and Klingon).
+- name: tailwindcss
+  level: 80
+- name: Sass/Less
+  level: 90
+- name: Jest/mocha
+  level: 70
+- name: Node.js
+  level: 70
+- name: Git
+  level: 90
+knowledge: 最近在忙着翻译 Effective TypeScript，写 React、Vue、TypeScript 和 Node 的总结。
 
 projects:
-- name: best-resume-ever
-  platform: Vue
-  timeperiod: February 2016
-  description: 👔 💼 Build fast 🚀 and easy multiple beautiful resumes and create your best CV ever! Made with Vue and LESS.
-  url: https://github.com/salomonelli/best-resume-ever
+- name: Web 容器运营平台
+  platform: React、TypeScript、Vite、Node
+  timeperiod: 2022.06 — 至今
+  description: 聚合容器、离线化、桥、外链的配置平台。做过主要功能：精简化运营系统、安全合规生产建设、外链配置迁移、定时发布。困难与收获：Vue 到 React 技术栈的切换、Node 开发、写脚本和抓日志。
+
+- name: 大宗商品专题平台
+  platform: Vue3、TypeScript、Vite、tailwindcss、Echarts
+  timeperiod: 2023.03.15 — 2023.05.01
+  description: 新华社的项目，主要是数据可视化相关的，重难点有： Echarts 的各种图的配置与设计图的适配、类流程图的编辑、适配 Chorme75。
+  url:
+
+- name: 到店账务平台
+  platform: Vue、TypeScript、webpack
+  timeperiod: 2021.06 — 2022.05
+  description: 美团酒旅报账线上化的项目，重难点有：封装可编辑表格、封装公共插件、monorepo 包管理。收获：提高项目开发效率的方法 TypeScript、规范化编码、管理与提交。
 
 # optional, not all resume templates have hobbies included
 hobbies:
@@ -82,17 +87,20 @@ hobbies:
   url: https://example.com
 
 contributions:
-- name: best-resume-ever
-  description: 👔 💼 Build fast 🚀 and easy multiple beautiful resumes.
-  url: https://github.com/salomonelli/best-resume-ever
+- name: mdn/translated-content
+  description: 帮助国内开发者查看更加优质的文档，主要是遇到没人翻译的文档时会选择贡献翻译或者是原文已经更新。
+  url: https://github.com/mdn/translated-content
+
+- name: vuepress-theme-reco
+  description: 一款简洁且易上手的 vuepress 主题博客/网站，我负责完善文档和平时一些功能更新，近期打算写一个新手使用该主题搭建博客的文章，更加方便搭建属于自己的博客。
+  url: https://github.com/vuepress-reco/vuepress-theme-reco-1.x
 
 contact:
-  email: john.doe@email.com
-  phone: 0123 456789
-  street: 1234 Broadway
-  city: New York
-  website: johndoe.com
-  github: johnyD
+  email: 951967917@qq.com
+  phone: 159 3515 7390
+  street: 北京
+  website: https://senmu-a.github.io/
+  github: senmu-a
 # en, de, fr, pt, ca, cn, it, es, th, pt-br, ru, sv, id, hu, pl, ja, ka, nl, he, zh-tw, lt, ko, el, nb-no
-lang: en
+lang: cn
 `
